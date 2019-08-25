@@ -1,5 +1,5 @@
 {
-  "name": "toutai2-lxs",
+  "name": "toutiao-lxs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -21,6 +21,16 @@
     "eslint-plugin-vue": "^5.0.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "lint-staged": "^8.1.5",
     "vue-template-compiler": "^2.6.10"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   }
 }
